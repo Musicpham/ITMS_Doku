@@ -1,10 +1,19 @@
 %!TEX root = ../Thesis.tex
-\section{\glqq Was soll in die Cloud?\grqq~(An-Nam Pham)}
-In Kapitel \ref{sec:IT-Infrastruktur} wurden die Vorteile für einen Umzug in die Cloud erläutert.
-Da ein Teil der gesamten IT-Systemlandschaft (die zentrale Datenbank) innerhalb der Firma selbst betrieben wird, handelt es sich in diesem Fall um eine hybride Cloud, die aus der Private Cloud (zentrale Datenbank) und der Public Cloud besteht.\\
+\section{Multichannel-System in der Cloud (An-Nam Pham)}
+Das Unternehmen Stylez betreibt ein Multichannel-Retailing (Mehrgleisiger Vertrieb des Handels). Wie in der Grafik \ref{img:Cloud_Implementierung} auf Seite \pageref{img:Cloud_Implementierung} zu sehen, kann der Kunde sowohl in der Filiale, als auch online per Webshop einkaufen. Gekaufte Waren können bei Bedarf ebenfalls sowohl in einer Filiale als auch online umgetauscht oder zurückgegeben werden (beim Online-Weg: Rücksendung per Post).
+
+Die Aufgabe diese Prozesse zu steuern und zu überwachen, ist ohne Unterstützung von passender IT-Systeme kaum zu bewältigen.\\
+Die Lösung für die große Multichannel-Herausforderung lautet Multichannel-System.\\
 \\
-Dieses Kapitel stellt unsere Empfehlung dar, was für Systeme (z.B. Module, Komponenten, etc.) in die Public Cloud installiert werden soll und was für ein Nutzen diese Systeme für das Unternehmen Stylez hat.
-Die folgende Abbildung zeigt die empfohlene Implementierung der gesamten IT-Systemlandschaft. Die einzelnen Komponenten werden in den nächsten Unterkapiteln erläutert:
+Das Multichannel-System ist ein Verbund von mehreren Systemen, die dem Unternehmen dabei unterstützen, sämtliche Geschäftsprozesse und das Kundenmangement zu steuern.\\
+\\
+Im Kapitel \ref{sec:IT-Infrastruktur} wurden die Vorteile für einen Umzug in die Cloud erläutert.
+Deswegen soll das Multichannel-System in der Cloud betrieben werden.
+Die zentrale Datenbank ist die Datenbasis für das Multichannel-System. Da hier nicht nur Unternehmensdaten, sondern auch vertrauliche Kundendaten gespeichert werden, soll diese Datenbank nicht in die Cloud ausgelagert werden, sondern weiterhin vom Unternehmen betrieben werden.
+
+Dies macht das Ganze zu einer hybriden Cloud, die aus der Private Cloud (zentrale Datenbank) und der Public Cloud besteht.\\
+\\
+Die folgende Abbildung zeigt die empfohlene Implementierung des Multichannel-Systems in der Hybrid Cloud:
 \begin{figure}[H]
 \centering
 \begin{minipage}[t]{0.8\textwidth}
@@ -14,6 +23,7 @@ Die folgende Abbildung zeigt die empfohlene Implementierung der gesamten IT-Syst
 \label{img:Cloud_Implementierung}
 \end{minipage}
 \end{figure}
+In den folgenden Unterkapiteln werden die einzelnen Komponenten des Multichannel-Systems kurz beschrieben und ihr Nutzen für das Unternehmen erläutert.
 \subsection{SAP IT-System}
 Wir empfehlen die gesamte Unternehmensstruktur von Stylez mit Hilfe von SAP im IT-System abzubilden\footnote{Berechtigungskonzept, Organisationsmanagement, Geschäftsprozesse, etc. werden in SAP ERP abgebildet, um ein optimales Business-IT-Alignment zu ermöglichen.}. Der Entscheidung für SAP bietet unter anderem folgende Vorteile\footcite{SAP_Vorteil}:
 \begin{itemize}
@@ -49,10 +59,11 @@ Das \acrlong{CRM} (CRM) (zu Deutsch: Kundenbeziehungsmanagement) unterstützt da
 \underline{\textbf{Der große Nutzen:}}\\
 Das CRM-System verwaltet nicht nur bestehende und potenzielle Kunden des Unternehmens. Wird das Supply-Chain-Management eingebunden, kann das CRM-System auch Lieferanten verwalten. Im Fall von Stylez können auch alle Franchisenehmer eingebunden werden.\\
 Das Besondere am CRM-System ist, dass es die Historie der Kundeninteraktion verfolgbar macht. Es kann sehr schnell ein Überblick über einen Kunden, Lieferanten oder Franchisenehmer\footnote{Zur Vereinfachung werden Kunden, Lieferanten oder Franchisenehmer im Folgenden mit Kunde zusammengefasst.} geschaffen werden (z.B. getätigte Anrufe, Häufigkeit der Support-Anfragen, Anteil am Geschäftsumsatz, uvm.).
-Dadurch kann schnell auf den Kunden eingegangen. Dies spart Zeit und fördert die Professionalität und somit auch das Vertrauen der Kunden. Außerdem kann das CRM-Systen benutzt werden, um Prognosen über zu erwartende Ergebnisse einfacher und genauer zu erstellen. Und es bietet volle Transparenz und bei Bedarf jederzeit Zugriff auf Kundeninformationen.
+Dadurch kann schnell auf den Kunden eingegangen. Dies spart Zeit und fördert die Professionalität und somit auch das Vertrauen der Kunden. Außerdem kann das CRM-Systen benutzt werden, um Prognosen über zu erwartende Ergebnisse einfacher und genauer zu erstellen. Und es bietet volle Transparenz und bei Bedarf jederzeit Zugriff auf Kundeninformationen.\footcite{CRM}
 
 \subsubsection{SAP Solution Manager}
-sdfjkl
+Der Solution Manager ist für SAP-Kunden kostenfrei und vereinfacht die Implementierung, den Betrieb, die Überwachung und die Unterstützung von SAP-Produkte im Unternehmen.
+
 %SAP Rapid Deployment Solution
 \subsection{Hybris (Webshop)}
 \section{So funktioniert der Umzug in die Hybrid Cloud (An-Nam Pham)}
