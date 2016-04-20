@@ -1,0 +1,125 @@
+\input{config/Config}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Parameter - Hier auf die eigene Arbeit anpassen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\dokumententyp}{Schriftliche Ausarbeitung}
+% \newcommand{\abgabedatum}{\today} 
+\newcommand{\abgabedatum}{xx. April 2016} 
+\newcommand{\ort}{Bergisch Gladbach} 
+\newcommand{\koorperationsunternehmen}{ComSol AG}
+\newcommand{\dokumententitel}{Entlastung und Optimierung der IT\\\textit{Für das Startup Stylez}}
+\newcommand{\dokumentenautor}{An-Nam Pham}
+\newcommand{\dokumentenautoradress}{Koppelsweg 23\\50127 Bergheim}
+\newcommand{\dokumentenautornummer}{Matrikelnummer: 2316600}
+\newcommand{\dokumentenpruefer}{Benno Klaas}
+
+\newcommandx{\technischnotiz}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+\newcommandx{\inhaltnotiz}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommandx{\verbesserungnotiz}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
+
+\newcommandx{\technischnotizzeile}[2][1=]{\todo[inline,linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+\newcommandx{\inhaltnotizzeile}[2][1=]{\todo[inline,linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommandx{\verbesserungnotizzeile}[2][1=]{\todo[inline,linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
+
+% \newcommandx{\improvement}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
+% \newcommandx{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
+
+% Infos zu Notizbefehlen:
+% http://tex.stackexchange.com/questions/9796/how-to-add-todo-notes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hypersetup{
+  colorlinks=false,
+  pdfborder={0 0 0},
+  pdftitle=\dokumententitel,
+  pdfauthor=\dokumentenautor
+} 
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Titelseite
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{Kapiteln/Titelseite}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Draft-Einstellungen
+%%
+%% Für die finale Version auskommentieren!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\fancyhead[L]{\color{red} Stand: \today~-~\currenttime}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Verzeichnisse Inhalt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Römische Seitennummerierung
+\pagenumbering{Roman}
+
+% Hinweise und Notizen
+% \include{Kapiteln/Hinweise}
+% \include{Kapiteln/Notizen}
+
+% Sperrvermerk und inhaltl. Todo
+% \include{Kapiteln/Sperrvermerk}
+%\include{Kapiteln/Todo}
+
+% Executive Summary
+%\include{Kapiteln/Executive_Summary_Sandbox}
+% \include{Kapiteln/Executive_Summary}
+
+% Inhaltsverzeichnis
+\tableofcontents%\newpage
+
+% Abkürzungsverzeichnis
+\printglossary[type=\acronymtype, style=mylist, title=Abkürzungsverzeichnis, toctitle=Abkürzungsverzeichnis]\newpage
+\setcounter{table}{0} % printglossary erzeugt eine Tabelle, die die Nummerierung der "echten" Tabellen durcheinander bringt. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Verzeichnisse Quellen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Abbildungsverzeichnis
+\fancyhead[R]{\listfigurename}
+\listoffigures\newpage
+
+% Tabellenverzeichnis
+% \fancyhead[R]{\listtablename}
+% \listoftables\newpage
+
+% Quelltextverzeichnis (noch nicht von mir benutzt)
+%\fancyhead[R]{\lstlistlistingname}
+%\lstlistoflistings\newpage
+
+% Kapitelüberschriften für den Arbeitstext
+\fancyhead[R]{\leftmark}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Inhalt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Arabische Seitennummerierung
+\pagenumbering{arabic} 
+
+\include{Kapiteln/Einleitung}
+\include{Kapiteln/Patrick}
+% \include{Kapiteln/Leonie_Regler}
+% \include{Kapiteln/Methodik}
+% \include{Kapiteln/Empirisch}
+% \include{Kapiteln/Fallstudie}
+% \include{Kapiteln/Grundlage_Berechtigungskonzept}
+% \include{Kapiteln/LRM}
+% \include{Kapiteln/Optimierung}
+% %\include{Kapiteln/Redesign}
+% \include{Kapiteln/Zusammenfassung}
+\include{Kapiteln/Anhang}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \include{Kapiteln/Quellenverzeichnis}
+ \include{Kapiteln/Ehrenwoertliche_Erklaerung}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

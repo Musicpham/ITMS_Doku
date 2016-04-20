@@ -1,0 +1,37 @@
+%!TEX root = ../Thesis.tex
+\section*{Quellenverzeichnis}
+\addcontentsline{toc}{section}{Quellenverzeichnis}
+\fancyhead[R]{Quellenverzeichnis}
+
+\defbibheading{mono}{\subsection*{Monographien}}
+\defbibheading{mag}{\subsection*{Aufsätze in Sammelbänden und Zeitschriften}}
+\defbibheading{art}{\subsection*{Zeitungsartikel}}
+\defbibheading{web}{\subsection*{Internetquellen}}
+\defbibheading{leg}{\subsection*{Rechtsprechung}}
+\defbibheading{comp}{\subsection*{Unternehmensunterlagen/Gesprächsnotizen}}
+\defbibheading{webinar}{\subsection*{Webinare und Seminarunterlagen}}
+\defbibheading{sap}{\subsection*{SAP Hilfe}}
+\defbibheading{manus}{\subsection*{Firmeninterne Manuskripte}}
+\defbibheading{interview}{\subsection*{Gesprächszusammenfassungen}}
+
+\setlength\bibitemsep{1.5\itemsep}
+\setlength{\bibhang}{2em}
+
+\renewcommand{\baselinestretch}{1.50}\normalsize
+
+\begingroup
+\sloppy
+
+% \printbibliography[keyword={mono},heading=mono]
+% \printbibliography[keyword={sap},heading=sap]
+% \printbibliography[keyword={mag},heading=mag]
+\printbibliography[heading=web,keyword={web}]
+% \printbibliography[heading=webinar,keyword={webinar}]
+% \printbibliography[heading=manus,keyword={manus}]
+% \printbibliography[heading=interview,keyword={interview}]
+% Bei Bedarf einkommentieren: (erzeugt sonst Warnungen)
+% \printbibliography[heading=art,keyword=art]
+% \printbibliography[heading=leg,keyword=leg]
+% \printbibliography[heading=comp,keyword=comp]
+
+\endgroup
