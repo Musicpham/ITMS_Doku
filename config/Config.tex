@@ -206,33 +206,6 @@ final             % draft beschleunigt die Kompilierung final ist standard
 
 % http://tex.stackexchange.com/questions/126839/how-to-add-a-colon-after-listing-label
 
-
-\makeatletter
-\begingroup\let\newcounter\@gobble\let\setcounter\@gobbletwo
-  \globaldefs\@ne \let\c@loldepth\@ne
-  \newlistof{listings}{lol}{\lstlistlistingname}
-\endgroup
-\let\l@lstlisting\l@listings
-\makeatother
-
-% Bilder nicht kompilieren
-% \renewcommand*\includegraphics[2][]{}
-
-\renewcommand*\cftfigpresnum{Abbildung~}
-\renewcommand*\cfttabpresnum{Tabelle~}
-\renewcommand*\cftlistingspresnum{Listing~}
-\renewcommand{\cftfigaftersnum}{:~~}
-\renewcommand{\cfttabaftersnum}{:}
-\renewcommand{\cftlistingsaftersnum}{:}
-\settowidth{\cftfignumwidth}{\cftfigpresnum 99~\cftfigaftersnum}
-\settowidth{\cfttabnumwidth}{\cfttabpresnum 99~\cftfigaftersnum}
-\settowidth{\cftlistingsnumwidth}{\cftlistingspresnum 99~\cftfigaftersnum}
-\setlength{\cfttabindent}{1.5em}
-\setlength{\cftfigindent}{1.5em}
-\setlength{\cftlistingsindent}{1.5em}
-
-\renewcommand\lstlistlistingname{Listingverzeichnis}
- 
 % Style für Kopf- und Fußzeilenfelder
 \pagestyle{fancy}
 \fancyhf{}
