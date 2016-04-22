@@ -1,0 +1,198 @@
+\section{Weitere IT-Maßnahmen (Vasilij Schneidermann)}
+
+In der Analyse wurden zusätzlich zu der großen Baustelle Cloud noch
+drei weitere Verbesserungspotenziale identifiziert: Die uneinheitliche
+Arbeitsplatzausstattung, der überforderte IT-Support und die
+Optimierung der Geschäftsprozesse.  Nahezu alle dieser Bereiche werden
+durch den \emph{SAP Solution Manager} gelöst, jedoch ist es teilweise
+möglich andere Lösungen für eine bessere Abdeckung hinzuzuziehen.  Zu
+diesen gehören das \emph{SAP IT Infrastructure Management} und
+\emph{Service Desk}.
+
+\subsection{Arbeitsplatzausstattung}
+
+Ehe eine einheitliche Arbeitsplatzausstattung verwendet werden kann,
+ist es notwendig sich auf einen, oder besser, zwei IT-Ausstatter
+festzulegen welche die nötige Infrastruktur zur Anbindung der
+Cloud-Services bereitstellen können.  Gründe für mehr als einen
+Ausstatter sind:
+
+\begin{itemize}
+\item Mehr Freiheit bei der Auswahl, da wenige Anbieter alle nötigen
+  Bereiche gut bedienen können
+\item Mehr Unabhängigkeit falls ein Anbieter nicht mehr die
+  gewünschten Leistungen erbringen kann
+\item Eine bessere Absicherung gegen Ausnutzung einer Einzelstellung
+  des Anbieters
+\end{itemize}
+
+Eine denkbare Kombination wäre z.B.~Lenovo für Business-Laptops und
+Dell für die verbleibende Peripherie (Monitore, Tastaturen, Mäuse,
+etc.).  Je nach örtlicher Verfügbarkeit und Konditionen können
+beliebige andere Anbieter ausgesucht werden.
+
+Nach Vereinbarung eines Kooperationsvertrages kann mit einem
+schrittweisen Rollout der neuen Hardware begonnen werden.  Zwar wäre
+es auch möglich die Infrastruktur auf einen Schlag zu ersetzen, jedoch
+ist dies generell nicht zu empfehlen, da etwaige Probleme beim Wechsel
+sich über die gesamte IT-Landschaft erstrecken würden und in diesem
+Falle es zu einem Totalausfall der IT kommen kann.  Im Gegensatz dazu
+ist die kontinuierliche Ersetzung der alten Hardware weniger riskant,
+verteilt die eingesetzten Kosten gleichmäßig über die Zeitdauer des
+Rollouts und erlaubt es über den Vorgang hinweg wertvolles Feedback
+der Mitarbeiter zu sammeln und umzusetzen.
+
+An dieser Stelle ist es sinnvoll festzuhalten welche Hardware wo
+eingesetzt wird.  Zu diesem Zweck kann der \emph{SAP Solution Manager}
+durch das \emph{SAP IT Infrastructure
+  Management}\footnote{Vgl.~\cite{SAP-IT-Realtech}, Online im
+  Internet} erweitert werden, direkt nach Verkabelung der Geräte
+werden ihre Seriennummern festgehalten und in die
+CMDB\footnote{Configuration Management Database} eingetragen werden.
+Neue Software wird von nun an nur noch aus autorisierten Quellen nach
+Anfrage aufgespielt, so wird die Lizenzproblematik gekonnt umschifft.
+
+Von diesem Zeitpunkt an ist die Hardware Teil des ERP-Prozesses: Der
+Erwerb wird ordnungsgemäß festgehalten, ausgefallene Hardware kann
+angefordert und nachbestellt werden, sie ist Teil des Inventars, die
+dafür notwendige Software kann mit Leichtigkeit angefordert und
+lizensiert werden, mithilfe von Monitoring und Berichten ist der
+Infrastrukturstatus dem höheren Management stets bekannt, etc.  Da
+jetzt auch der \emph{SAP Solution Manager} über das Inventar
+informiert ist, kann man die Infrastruktur nun wie jeden anderen Teil
+des Unternehmens verwalten und auftretende Probleme schnell
+lösen\footnote{Vgl.~\cite{SAP-IT-Infrastructure-Management}, Online im
+  Internet}.
+
+\subsection{IT-Support}
+
+Für die Bereitstellung eines idealen IT-Supports ist es notwendig
+genau einen zentralen Zugriffspunkt zu haben.  Dieser muss nicht auf
+ein Kommunikationsmedium zum Einreichen der sogenannten
+\emph{Incidents} beschränkt sein, denkbar ist z.B.~eine Kombination
+aus Benachrichtigung vom Produkt, bzw.~Anwendung heraus sowie einem
+klassischen per Telefon und E-Mail erreichbaren \emph{Service
+  Desk}\footnote{Vgl.~\cite{SAP-Service-Desk}, Online im Internet}.
+Diese erhalten/erfassen für jeden Incident eine einheitlich gestaltete
+Problembeschreibung, Priorität sowie weitere systemrelevante Daten wie
+die Version der eingesetzten Software und das Betriebssystem des Kunden.
+
+Zu diesem Zeitpunkt kann die Supportanfrage von einem automatisierten
+System auf Merkmale wie den Supportlevel und einen ggf.~schon
+vorhandenen Servicevertrag analysiert werden.  Sind diese bekannt,
+weist das System die Anfrage einem Mitarbeiter zu, benachrichtigt
+diesen und leitet sie bei Bedarf (wie z.B.~nach einer manuellen
+Zuweisung an einen anderen Mitarbeiter) weiter.  Bei Bedarf können
+noch fehlende Informationen wie E-Mail-Adresse und Telefonnummer vom
+Kunden angefragt werden.
+
+Die so vervollständigte Supportanfrage wird auf eine mögliche Lösung
+untersucht.  Da ein Großteil auftretender Probleme dem Support schon
+bekannt und wiederkehrender Natur ist, werden die beschriebenen
+Symptome in einer sogenannten \emph{Customer Solution Database}
+gesucht welche mit der Zeit durch neue Anfragen erweitert und bekannte
+Anfragen verbessert wird.  Findet man eine möglicherweise anwendbare
+Lösung, geht es an die Umsetzung seitens des Kunden, ansonsten wird
+die Anfrage an ein höheres Supportlevel delegiert.  SAP bietet dafür
+ein \emph{Support Back Office} an in welchem man sich nach Anforderung
+der dafür nötigen Credentials mit ihnen austauschen kann.  Die so
+erhaltene Lösung wird ähnlich der Lösungsdatenbank bereitgestellt,
+sodass man auf den gleichen Workflow wie bei der internen
+Lösungsfindung kommt.
+
+Als nächstes kontaktiert man den Kunden mit der gefundenen Lösung und
+hilft diesem sie anzuwenden und den Erfolg festzustellen.  Ist diese
+erfolgreich, hinterlegt man sie in der \emph{Customer Solution
+  Database}, andernfalls iteriert man durch andere gefundene Lösungen.
+Schlussendlich markiert man das Supportticket als gelöst und bittet um
+Kundenfeedback.  Dieses ist extremst wichtig um den IT-Support wirksam
+zu steuern und den Kunden anzupassen.  Nur so kann sichergestellt
+werden, dass dieser wirkungsvoll bleibt und den Ansprüchen der Kunden
+gerecht wird.
+
+Zur Integration in das Reporting werden in dieser IT-Support-Lösung
+die Ticketzahlen nach Zeit/Abteilung, die Dauer der Bearbeitung,
+Kundenzufriedenheit und interessante Verteilungen protokolliert.  Zu
+diesen gehören:
+
+\begin{itemize}
+\item Über die \emph{Customer Solution Database} gelöste Tickets
+\item Mit externen Hilfe gelösten Tickets
+\item Menge an Tickets pro Abteilung
+\item Tickets mit Konsequenzen im Change Management
+\end{itemize}
+
+Eine weitere wichtige Berücksichtigung ist, dass ein bestimmter Anteil
+an Supportanfragen nicht immer nur durch interne und
+SAP-Beratungsstellen gelöst werden kann, sondern es bei Bedarf auch
+externe Help Desks geben kann welche z.B.~durch Outsourcing oder
+anderweitig spezialisierte Expertise dafür besser geeignet sind.  Das
+Service Desk kann auch bei Einbindung dieser externen Ressourcen
+weiterhin deren Effizienz und Effektivität festhalten und diese somit
+ähnlich wie die anderen Beratungsstellen integrieren kann.
+
+\subsection{Kennzahlen und Benchmarking}
+
+Ein an das Unternehmen angepasstes SAP-ERP-System erfasst
+verschiedenste Daten, jedoch ist es notwendig die für die Zielsetzung
+und -anpassung wichtigen Kriterien gesondert zu beobachten um anhand
+der Soll- und Ist-Ergebnisse die Geschäftsprozesse anpassen zu
+können.  Die so gewählten Kennzahlen dürfen dabei nicht in Isolation,
+sondern müssen stets im Zusammenhang mit einer Zielgröße betrachtet
+werden, erst dann ist ein Benchmarking durch einen Vergleich mit einem
+anderen Report, einem anderen Unternehmens oder einer anderen Branche
+möglich.
+
+SAP schlägt für IT-Unternehmen vor die Bereiche \emph{Continuity},
+\emph{Efficiency} und \emph{Compliance} zu
+betrachten\footnote{Vgl.~\cite{SAP-Standard-IT-Service-Agreement},
+  Online im Internet}.  Für die folgende Auflistung wurden für
+sinnvoll erachtete Kennzahlen aus ihren Dokumenten sowie selbst
+auserwählte mit typischen Zielgrößen genommen.
+
+\begin{itemize}
+\item Continuity
+  \begin{itemize}
+  \item Durchschnittliche Zeit zur Erstellung einer Supportanfrage (< 30min)
+  \item Durchschnittliche Zeit für administrative Aufgabe (< 15min)
+  \item Prozentualer Anteil durch das Help Desk gelöster Anfragen (> 90\%)
+  \item Häufigkeit der Aktualisierung der Support Database (> 2x täglich)
+  \item Durchschnittliche Uptime von IT-Services (> 99,9\%)
+  \end{itemize}
+\item Efficiency
+  \begin{itemize}
+  \item Kundenzufriedenheit (> 90\%)
+  \item Dauer zur Bearbeitung interner E-Mails (< 1/2 Tag)
+  \item Durchschnittliche Zeit zur Bearbeitung einer IT-Anfrage (< 1 Tag)
+  \item Prozentualer Anteil durch 1st Level Support gelöster Anfragen (> 80\%)
+  \item Prozentualer Anteil durch 2nd Level Support gelöster Anfragen (< 20\%)
+  \item Anzahl insgesamt gelöster Anfragen (< 5/Tag)
+  \item Maximale Ausfalldauer von IT-Services (< 1h)
+  \item Durchschnittliche Response Time von IT-Services (< 1s)
+  \end{itemize}
+\item Compliance
+  \begin{itemize}
+  \item Interner Zufriedenheitsfaktor (> 80\%)
+  \item Häufigkeit von SLA-Reviews (1/Periode)
+  \item Ersparnisse durch umgesetzte Maßnahmen (> 20\%)
+  \end{itemize}
+\end{itemize}
+
+Für die Auswertung der Kennzahlen ist der CTO zuständig.  Seine
+Aufgabe ist es ein Auge auf der Entwicklung im Vergleich zu vorigen
+Perioden zu behalten, eingeschränkte Prognosen zu machen und Berichte
+sowie Änderungsmaßnahmen mit dem Rest der Führungsetage zu teilen.
+Als Ergänzung zu klassischen Reports sind Dashboards denkbar.  Der
+dafür nötige Prozess kann also in die folgenden Schritte unterteilt
+werden:
+
+\begin{enumerate}
+\item Planung der Ziele und Maßnahmen
+\item Umsetzung dieser in die Praxis
+\item Testen der Implementierung mit Analyse der Ergebnisse
+\item Anpassung der Maßnahmen und/oder Ziele
+\end{enumerate}
+
+Sollte seine Analysen ergeben, dass die Resultate die selbstgesteckten Ziele
+stark verfehlen, wird er nach Best Practices Ausschau halten und diese
+wo es Sinn ergibt umsetzen.
